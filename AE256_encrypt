@@ -19,6 +19,7 @@ from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.backends import default_backend
 from django.utils.encoding import force_bytes, force_str
 from urllib import request
+
 '''
 baseurl='https://www.devconnect2nse.com/extranet-api'
 baseurl1='https://www.connect2nse.com/extranet-api/'
@@ -40,7 +41,7 @@ api=x.request.body
 print(api)
 print(x.text)
 '''
-
+'''
 seg="CM"
 path="/"
 import requests
@@ -82,6 +83,7 @@ if response.status_code == 200:
 else:
     # If the request is unsuccessful, print the status code and the error message
     print(f'Request failed with status code {response.status_code}: {response.text}')
+'''
 
 '''   
 SECRET_KEY = "WZErZKQ5Ow36eA5VMx4TKkbFi0EcjG3yRW5RVFO0PWI="

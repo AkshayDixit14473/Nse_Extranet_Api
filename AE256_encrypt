@@ -1,16 +1,6 @@
 import requests
 import json
-import pandas as pd
-import datetime
-from datetime import datetime
-from datetime import date, timedelta
-import pprint
 import os
-import sys
-import time
-import glob
-import subprocess
-import smtplib
 import json
 import requests
 import base64
@@ -20,74 +10,9 @@ from cryptography.hazmat.backends import default_backend
 from django.utils.encoding import force_bytes, force_str
 from urllib import request
 
-'''
-baseurl='https://www.devconnect2nse.com/extranet-api'
-baseurl1='https://www.connect2nse.com/extranet-api/'
-url = 'https://www.connect2nse.com/extranet-api/login/1.0'
-myobj = {
-"memberCode":"90185",
-"loginId":"it",
-"password":"yxZKIX0ILYQWarOFf9kO7qVtmc6EXnl6tPsU_wEpr0I="
-}
-#url1 = 'https://www.devconnect2nse.com/extranet-api/logout/1.0'
-#myobj1 = {
-#"memberCode":"90185",
-#"loginId":"14473"
-#}
-x = requests.post(url, json = myobj)
-print (x)
-print(type(x))
-api=x.request.body
-print(api)
-print(x.text)
-'''
-'''
-seg="CM"
-path="/"
-import requests
-# Replace <TOKEN> with your actual token
-TOKEN ='eyJhbGciOiJSUzI1NiJ9.eyJtZW1iZXJDZCI6IjkwMTg1Iiwic3ViIjoiOTAxODUiLCJsb2dpbklkIjoiaXQiLCJpc3MiOiJpdCIsImV4cCI6MTY3NDQ2ODIxNSwiaWF0IjoxNjc0NDY0NjE1LCJqdGkiOiI4YWZiMTBhOS03NzNkLTQwZDMtYWY3My1kMTViMTM0MjFiMDAifQ.PcOGMSpZ8tCJcGafXzxuhkZQCZyG0Vzx_aJjmVrvYSHCXR7H7mZP6_alS0Bon9UP75FSZ89p5UtJN-ii2qx8Ug'
-# Set the API endpoint URL
-#url = 'https://www.devconnect2nse.com/extranet-api/member/content/1.0?segment=CM&folderPath=/Reports/'
-url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Reports&filename=NCL_C_SD01_1_90185_30122022.csv'
-# Set the headers for the request, including the Authorization header with the token
-headers = {'Authorization': 'Bearer ' + TOKEN}
-response = requests.get(url, headers=headers)
-#response = requests.get(url)
-# Check the status code of the response
-# request.urlretrieve(remote_url, local_file)
-if response.status_code == 200:
-    # If the request is successful, print the response data
-    #print(response.json())
-    #request.urlretrieve(url,"/home/akshay/newfile.csv")
-    #data=requests.get(url)
-    print(response)
-    data=response.content
-    #print(data)
-    print(type(data))
-    r = requests.get(url)
-    print(data)
-    print(r.encoding)
-    #with open('/home/akshay/Downloads/From_api_ftp/C_MG02_90185_21042020.csv', 'w') as fd:
-     #for chunk in r.iter_content(chunk_size=128):
-      #  fd.write(chunk)
-    with open('/home/akshay/Downloads/From_api_ftp/NCL_C_SD01_1_90185_30122022.csv', 'wb') as f:
-     #line = [data.encode('utf8')]
-     f.write(data)
-    #print(data.text)
-    #print(type(data["data"]))
-    #print(data["data"])
-    #for x in data["data"]:
-     #print(x["name"])
-     #print("    ")
-else:
-    # If the request is unsuccessful, print the status code and the error message
-    print(f'Request failed with status code {response.status_code}: {response.text}')
-'''
 
-'''   
-SECRET_KEY = "WZErZKQ5Ow36eA5VMx4TKkbFi0EcjG3yRW5RVFO0PWI="
-value = force_bytes("Clopen#1password")
+SECRET_KEY = "<Unencrypted key>"
+value = force_bytes("<password for api >")
 
 backend = default_backend()
 
@@ -123,4 +48,28 @@ if __name__ == '__main__':
     print(text)
     text = force_str(crypto.decrypt(base64.urlsafe_b64decode("LvRHkSW+8OIMyk51T87KDQ==")))
     print(text)
+
+#Code for login using encrypted password
+
 '''
+baseurl='https://www.devconnect2nse.com/extranet-api'   #for test api
+baseurl1='https://www.connect2nse.com/extranet-api/'     #for live api
+url = 'https://www.connect2nse.com/extranet-api/login/1.0'
+myobj = {
+"memberCode":"<nse member code>",
+"loginId":"<id used for api registration>",
+"password":"<Encrypted Password"
+}
+#url1 = 'https://www.devconnect2nse.com/extranet-api/logout/1.0'
+#myobj1 = {
+#"memberCode":"90185",
+#"loginId":"14473"
+#}
+x = requests.post(url, json = myobj)
+print (x)
+print(type(x))
+api=x.request.body
+print(api)
+print(x.text)
+'''
+

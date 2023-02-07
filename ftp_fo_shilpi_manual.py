@@ -49,9 +49,9 @@ print("##########  logging in  ##########")
 baseurl='https://www.connect2nse.com/extranet-api/login/1.0'
 url = 'https://www.connect2nse.com/extranet-api/login/1.0'
 myobj = {
-"memberCode":"90185",
-"loginId":"it",
-"password":"DpDPeqUGumuAOWfW17rICQ=="
+"memberCode":"<member code>",
+"loginId":"<login id>",
+"password":"<Encypted Password>"
 }
 x = requests.post(url, json = myobj)
 print (x)
@@ -64,7 +64,7 @@ TOKEN=j["token"]
 print("#########  You are now in Downloading content   ##########") 
 print("contract file would be availaible for yesterday's date only")
 
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Reports&filename=F_PS03_90185_"+date1+".CSV.gz"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Reports&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=&date=18-01-2023'
 #url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment="+seg+"&folderPath="+path+"&filename="+filename
 # Set the headers for the request, including the Authorization header with the token
@@ -77,7 +77,7 @@ if response.status_code == 200:
     r = requests.get(url)
     print(url)
     print(response)
-    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/F_PS03_90185_"+date1+".CSV.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:
@@ -88,7 +88,7 @@ else:
 
 # Set the API endpoint URL
 #url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=/Downloads&filename=text.txt
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Reports&filename=F_MG13_90185_"+date1+".lis.gz"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Reports&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=&date=18-01-2023'
 headers = {'Authorization': 'Bearer ' + TOKEN}
 # Make the GET request
@@ -101,14 +101,14 @@ if response.status_code == 200:
     print(url)
     print(response)
     r = requests.get(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/F_MG13_90185_"+date1+".lis.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:
     # If the request is unsuccessful, print the status code and the error message
     print(f'Request failed with status code {response.status_code}: {response.text}')
     
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Reports&filename=F_STT01_90185_"+date1+".CSV.gz"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Reports&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=&date=18-01-2023'
 headers = {'Authorization': 'Bearer ' + TOKEN}
 # Make the GET request
@@ -121,7 +121,7 @@ if response.status_code == 200:
     print(url)
     print(response)
     r = requests.get(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/F_STT01_90185_"+date1+".CSV.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
     
@@ -129,7 +129,7 @@ else:
     # If the request is unsuccessful, print the status code and the error message
     print(f'Request failed with status code {response.status_code}: {response.text}')
 
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Onlinebackup&filename="+date1+"_90185.txt.gz"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=Onlinebackup&<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=&date=18-01-2023'
 headers = {'Authorization': 'Bearer ' + TOKEN}
 # Make the GET request
@@ -142,7 +142,7 @@ if response.status_code == 200:
     print(url)
     print(response)
     r = requests.get(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/"+date1+"_90185.txt.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:
@@ -169,7 +169,7 @@ else:
     # If the request is unsuccessful, print the status code and the error message
     print(f'Request failed with status code {response.status_code}: {response.text}')
 
-url ="https://www.connect2nse.com/extranet-api/common/file/download/1.0?segment=FO&folderPath=MarketReports&filename=F_CN01_NSE_"+date1+".CSV.gz"
+url ="https://www.connect2nse.com/extranet-api/common/file/download/1.0?segment=FO&folderPath=MarketReports&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=FO&folderPath=&date=18-01-2023'
 #url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment="+seg+"&folderPath="+path+"&filename="+filename
 # Set the headers for the request, including the Authorization header with the token
@@ -182,7 +182,7 @@ if response.status_code == 200:
     r = requests.get(url)
     print(url)
     print(response)
-    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/"+date1+".CSV.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO/<filename>, 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:

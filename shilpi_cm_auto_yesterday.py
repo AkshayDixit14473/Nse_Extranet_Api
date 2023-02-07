@@ -43,9 +43,9 @@ print("##########  logging in  ##########")
 baseurl='https://www.connect2nse.com/extranet-api/login/1.0'
 url = 'https://www.connect2nse.com/extranet-api/login/1.0'
 myobj = {
-"memberCode":"90185",
-"loginId":"it",
-"password":"yxZKIX0ILYQWarOFf9kO7qVtmc6EXnl6tPsU_wEpr0I="
+"memberCode":"<member code>",
+"loginId":"<login id>",
+"password":"<encrypted password>
 }
 x = requests.post(url, json = myobj)
 print (x)
@@ -81,7 +81,7 @@ else:
 
 # Set the API endpoint URL
 #url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=/Downloads&filename=text.txt
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Reports&filename=C_MG13_90185_"+date1+".lis.gz"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Reports&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=&date=18-01-2023'
 headers = {'Authorization': 'Bearer ' + TOKEN}
 # Make the GET request
@@ -93,14 +93,14 @@ if response.status_code == 200:
     #print(data)
     print(url)
     r = requests.get(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/C_MG13_90185_"+date1+".lis.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:
     # If the request is unsuccessful, print the status code and the error message
     print(f'Request failed with status code {response.status_code}: {response.text}')
     
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Reports&filename=MWST_90185_T_"+date1+".csv"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Reports&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=&date=18-01-2023'
 headers = {'Authorization': 'Bearer ' + TOKEN}
 # Make the GET request
@@ -112,14 +112,14 @@ if response.status_code == 200:
     #print(data)
     print(url)
     r = requests.get(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/MWST_90185_T_"+date1+".csv", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:
     # If the request is unsuccessful, print the status code and the error message
     print(f'Request failed with status code {response.status_code}: {response.text}')
 
-url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Onlinebackup&filename="+date1+"_90185.txt.gz"
+url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=Onlinebackup&filename=<filename>"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=&date=18-01-2023'
 headers = {'Authorization': 'Bearer ' + TOKEN}
 # Make the GET request
@@ -131,7 +131,7 @@ if response.status_code == 200:
     #print(data)
     print(url)
     r = requests.get(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/"+date1+"_90185.txt.gz", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:
@@ -140,7 +140,7 @@ else:
 
 
 
-url ="https://www.connect2nse.com/extranet-api/common/file/download/1.0?segment=CM&folderPath=bhavcopy&filename="+date2+"+.md"
+url ="https://www.connect2nse.com/extranet-api/common/file/download/1.0?segment=CM&folderPath=bhavcopy&filename=<filename>d"
 #url ='https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment=CM&folderPath=&date=18-01-2023'
 #url ="https://www.connect2nse.com/extranet-api/member/file/download/1.0?segment="+seg+"&folderPath="+path+"&filename="+filename
 # Set the headers for the request, including the Authorization header with the token
@@ -152,7 +152,7 @@ if response.status_code == 200:
     data=response.content
     r = requests.get(url)
     print(url)
-    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/"+date2+".md", 'wb') as f:
+    with open("/home/akshay/Downloads/From_api_ftp/Automatic/"+date1+"_CM/<filename>", 'wb') as f:
      #line = [data.encode('utf8')]
      f.write(data)
 else:

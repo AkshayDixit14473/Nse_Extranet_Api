@@ -46,12 +46,12 @@ if not os.path.isdir("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_FO"):
  os.mkdir("/home/akshay/Downloads/From_api_ftp/Manual/"+date1+"_CM")
 
 print("##########  logging in  ##########")
-baseurl='https://www.connect2nse.com/extranet-api/login/1.0'
+baseurl='https://www.connect2nse.com/extranet-api/login/1.0'  #live environment
 url = 'https://www.connect2nse.com/extranet-api/login/1.0'
 myobj = {
-"memberCode":"90185",
-"loginId":"it",
-"password":"DpDPeqUGumuAOWfW17rICQ=="
+"memberCode":"<member code>",
+"loginId":"<login id>",
+"password":"<Encypted Password>"
 }
 x = requests.post(url, json = myobj)
 print (x)

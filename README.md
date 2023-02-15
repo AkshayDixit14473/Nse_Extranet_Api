@@ -1,6 +1,6 @@
 # **Nse_Extranet_Api**
 
-National Stock Exchange had recently introduced a brand new api for its members which would replace the older File transfer protocol(FTP) method. In this repository, codes to automaticaly download chosen files are present. A user interface has also been designed through code to use the features available through the api.
+National Stock Exchange is going to introduce a brand new api for its members . This api would be use to access common and member files of different segments. In this repository, codes to automaticaly download chosen files is present. A user interface has also been designed through code to use all the features available through the api.
 
 Before trying to make code, please make sure all prerequisites are completed according to the circulars MSD 54667 and MSD 55065. After making a user id, assigning roles and generating secret key, you would need to encrpt the key in AES256 encyption. Then this encrypted key can be used for login through a json object.
 
@@ -20,5 +20,5 @@ Before trying to make code, please make sure all prerequisites are completed acc
 
 >**ftp_cm_shilpi_manual.py** consist of code which gives manual control over live cm segment functions
 
->**ftp_fo_shilpi_manual.py** consist of code which gives manual control over live cm segment functions
+>**ftp_fo_shilpi_manual.py** consist of code which gives manual control over live fo segment functions
 

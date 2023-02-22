@@ -50,7 +50,7 @@ with gzip.open(dt+'<name>', 'rb') as f_in:
     with open(dt+'<name>', 'wb') as f_out:
         shutil.copyfileobj(f_in, f_out)
 
-os.remove('C_MG13_90185_'+dt+'.lis.gz')                                                          #REMOVING ZIPPED FILES AFTER EXTRACTION
+os.remove('<name>'+dt+'.lis.gz')                                                          #REMOVING ZIPPED FILES AFTER EXTRACTION
 os.remove(dt+'<name>')                
         
 os.mkdir(dt)                                                                                     #MAKING FOLDER
